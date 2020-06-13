@@ -1,0 +1,76 @@
+信息系统与数据库技术练习14答题卡
+
+班级：信息管理2班
+姓名:  邓圣涛 
+学号：20190307234
+
+注:请将答案放置在序号下方.**
+
+(一)
+1.
+使用项目
+2.
+创建proc p_ep1
+如
+选择Employee.Did，EP.EID，Ename，Esex，Projects。
+从员工加入项目加入EP
+关于项目，Pid=EP.Pid
+关于Employee.Eid=EP.Eid
+3.
+exec p_ep1
+4.
+创建proc p_ep2
+@WorkDate VARCHAR(4)，@WID VARCHAR(4)
+如
+选择Employee.Did，EP.EID，Ename，Esex，Projects。
+从员工加入项目加入EP
+关于项目，Pid=EP.Pid
+关于Employee.Eid=EP.Eid
+其中WorkDate=@WorkDate和DID=@DID
+5.
+exec_ep2@WorkDate=‘1990-07-01 00：00：00.000’，@DID=‘D001’
+6.
+创建proc p_ep3
+@DNAMEVARCHAR(20)=“财务部”
+如
+选择Department.DID，DNAME，EID，Ename，Esex，WorkDate
+从部门加入员工
+关于部门.Did=Employee.DID
+其中DNAME=@DNAME
+7.
+exec P_EP_3
+8.
+exec_ep3@DNAME=‘人事部’
+9.
+创建proc p_ep4
+@basePay int
+如
+选择*
+从雇员那里
+其中basePay>@basePay
+10.
+exec_ep4@BasePay=8000
+11.
+创建proc p_emp
+@ename VARCHAR(10)
+如
+选择*
+从雇员那里
+其中Ename喜欢‘%’+@Ename+‘%’
+12.
+exec_emp@ename=‘丽’
+13.
+exec sp_Helptext p_emp
+14.
+更改proc p_ep3
+@DNAMEVARCHAR(20)=“财务部”
+加密
+如
+选择Department.DID，DNAME，EID，Ename，Esex，WorkDate
+从部门加入员工
+关于部门.Did=Employee.DID
+其中DNAME=@DNAME
+15.
+exec sp_Helptext p_ep3
+16.
+下降proc p_ep3
